@@ -1,11 +1,69 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Hero Section -->
+  <div class="hero min-h-[70vh] bg-gradient-to-br from-primary/50 to-secondary/90">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">Scale your business with Intelligent Automation</h1>
+        <p class="py-6">Ekselera provides premium software development services to help you automate time-consuming tasks and scale without increasing labour requirements.</p>
+        <a href="/contact" class="btn btn-neutral">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Value Prop Section -->
+  <div class="py-20 bg-base-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Why Ekselera?</h2>
+        <p class="text-lg opacity-80 max-w-2xl mx-auto">
+          We focus on automation so you can focus on growth. Stop trading time for money and start leveraging software and AI to multiply your output.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">Software Development</h2>
+            <p>Custom software solutions tailored to your specific business needs, built with modern technologies for reliability and scale.</p>
+            <div class="card-actions justify-end">
+              <a href="/services/software-development" class="btn btn-ghost btn-sm">Learn Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">AI & Automation</h2>
+            <p>Leverage the latest in Artificial Intelligence to automate complex decisions and repetitive workflows.</p>
+            <div class="card-actions justify-end">
+              <a href="/services/ai-automation" class="btn btn-ghost btn-sm">Learn Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">Business Optimization</h2>
+            <p>Analyze your current processes and identify bottlenecks that can be eliminated through strategic digital transformation.</p>
+            <div class="card-actions justify-end">
+              <a href="/services/business-optimization" class="btn btn-ghost btn-sm">Learn Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
