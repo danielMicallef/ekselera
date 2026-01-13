@@ -6,7 +6,6 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: 'https://ekselera.com',
-  output: 'server',
   base: '',
   integrations: [sitemap()],
   adapter: cloudflare(),
