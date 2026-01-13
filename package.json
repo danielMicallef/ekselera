@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "bunx wrangler pages deploy dist"
+    "deploy": "astro build && bunx wrangler pages deploy dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
