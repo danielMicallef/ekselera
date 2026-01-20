@@ -205,12 +205,15 @@
           "name": "Andrew Cassar Overend",
           "role": "Founder & Lead Product",
           "linkedin": "https://www.linkedin.com/in/andrew-cassar-overend/",
+          "x": "https://x.com/acassaroverend",
           "image": "andrew"
         },
         {
           "name": "Daniel Micallef",
           "role": "Founder & Lead Architect",
           "linkedin": "https://www.linkedin.com/in/daniel-micallef/",
+          "website": "https://danielmicallef.xyz",
+          "x": "https://x.com/micallef_daniel",
           "image": "daniel"
         }
       ]
