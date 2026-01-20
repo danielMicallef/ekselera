@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import content from '../i18n/en.json';
+
+const { hero, form, info } = content.contact;
 ---
 
 <Layout>
   <div class="hero min-h-[40vh] bg-gradient-to-br from-primary/50 to-secondary/90 text-primary-content">
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Contact Us</h1>
-        <p class="py-6 text-xl opacity-90">Ready to scale your business? Get in touch with us today.</p>
+        <h1 class="text-5xl font-bold">{hero.title}</h1>
+        <p class="py-6 text-xl opacity-90">{hero.description}</p>
       </div>
     </div>
   </div>
@@ -20,42 +23,42 @@ import Layout from '../layouts/Layout.astro';
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="form-control">
               <label class="label">
-                <span class="label-text font-semibold">Full Name</span>
+                <span class="label-text font-semibold">{form.labels.fullName}</span>
               </label>
-              <input type="text" name="fullName" placeholder="Your Name" class="input input-bordered w-full" required />
+              <input type="text" name="fullName" placeholder={form.placeholders.fullName} class="input input-bordered w-full" required />
             </div>
             <div class="form-control">
               <label class="label">
-                <span class="label-text font-semibold">Email</span>
+                <span class="label-text font-semibold">{form.labels.email}</span>
               </label>
-              <input type="email" name="email" placeholder="email@example.com" class="input input-bordered w-full" required />
+              <input type="email" name="email" placeholder={form.placeholders.email} class="input input-bordered w-full" required />
             </div>
           </div>
           <div class="form-control mt-4">
             <label class="label">
-              <span class="label-text font-semibold">Subject</span>
+              <span class="label-text font-semibold">{form.labels.subject}</span>
             </label>
-            <input type="text" name="subject" placeholder="How can we help?" class="input input-bordered w-full" required />
+            <input type="text" name="subject" placeholder={form.placeholders.subject} class="input input-bordered w-full" required />
           </div>
           <div class="form-control mt-4">
             <label class="label">
-              <span class="label-text font-semibold">Message</span>
+              <span class="label-text font-semibold">{form.labels.message}</span>
             </label>
-            <textarea name="message" class="textarea textarea-bordered h-32 w-full" placeholder="Tell us about your project or needs..." required></textarea>
+            <textarea name="message" class="textarea textarea-bordered h-32 w-full" placeholder={form.placeholders.message} required></textarea>
           </div>
           <div class="form-control mt-8">
-            <button class="btn btn-primary btn-block">Send Message</button>
+            <button class="btn btn-primary btn-block">{form.submitButton}</button>
           </div>
         </form>
       </div>
 
       <!-- Contact Info -->
       <div class="flex flex-col justify-center">
-        <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+        <h2 class="text-3xl font-bold mb-8">{info.title}</h2>
         <p class="text-lg mb-8 leading-relaxed">
-          Whether you have a specific project in mind or just want to explore how automation can benefit your business, we're here to help.
+          {info.description}
         </p>
-        
+
         <div class="space-y-6">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -64,11 +67,11 @@ import Layout from '../layouts/Layout.astro';
               </svg>
             </div>
             <div>
-              <h3 class="font-bold">Email</h3>
-              <p>hello@ekselera.com</p>
+              <h3 class="font-bold">{info.email.label}</h3>
+              <p>{info.email.value}</p>
             </div>
           </div>
-          
+
            <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -77,8 +80,8 @@ import Layout from '../layouts/Layout.astro';
               </svg>
             </div>
             <div>
-              <h3 class="font-bold">Location</h3>
-              <p>Valletta, Malta</p>
+              <h3 class="font-bold">{info.location.label}</h3>
+              <p>{info.location.value}</p>
             </div>
           </div>
         </div>

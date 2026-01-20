@@ -1,3 +1,10 @@
+---
+import content from '../i18n/en.json';
+
+const { title } = content.meta;
+const { services, about, contact, cta } = content.navbar;
+---
+
 <div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
@@ -6,38 +13,38 @@
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li>
-          <a>Services</a>
+          <a>{services.title}</a>
           <ul class="p-2">
-            <li><a href="/services/software-development">Software Development</a></li>
-            <li><a href="/services/ai-automation">AI & Automation</a></li>
-            <li><a href="/services/business-optimization">Business Optimization</a></li>
+            {services.items.map((item) => (
+              <li><a href={item.link}>{item.title}</a></li>
+            ))}
           </ul>
         </li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">{about}</a></li>
+        <li><a href="/contact">{contact}</a></li>
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost text-xl">Ekselera</a>
+    <a href="/" class="btn btn-ghost text-xl">{title}</a>
   </div>
 
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li>
         <details>
-          <summary>Services</summary>
+          <summary>{services.title}</summary>
           <ul class="p-2 bg-base-100 rounded-t-none w-52 z-[1] shadow">
-             <li><a href="/services/software-development">Software Development</a></li>
-            <li><a href="/services/ai-automation">AI & Automation</a></li>
-            <li><a href="/services/business-optimization">Business Optimization</a></li>
+            {services.items.map((item) => (
+              <li><a href={item.link}>{item.title}</a></li>
+            ))}
           </ul>
         </details>
       </li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">{about}</a></li>
+      <li><a href="/contact">{contact}</a></li>
     </ul>
   </div>
 
   <div class="navbar-end">
-    <a href="/contact" class="btn btn-primary">Get In Touch</a>
+    <a href="/contact" class="btn btn-primary">{cta}</a>
   </div>
 </div>

@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "Ekselera",
+    "heading": "Ekselera - Scale your business with Intelligent Automation",
+    "description": "Ekselera provides premium software development services to help you automate time-consuming tasks and scale without increasing labour requirements.",
+    "hero": {
+      "title": "Contact Us",
+      "description": "Ready to scale your business? Get in touch with us today."
+    },
+    "form": {
+      "labels": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "fullName": "Your Name",
+        "email": "email@example.com",
+        "subject": "How can we help?",
+        "message": "Tell us about your project or needs..."
+      },
+      "submitButton": "Send Message"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "description": "Whether you have a specific project in mind or just want to explore how automation can benefit your business, we're here to help.",
+      "email": {
+        "label": "Email",
+        "value": "hello@ekselera.com"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Valletta, Malta"
+      }
+    }
+  },
+  "navbar": {
+    "services": {
+      "title": "Services",
+      "items": [
+        {
+          "title": "Software Development",
+          "link": "/services/software-development"
+        },
+        {
+          "title": "AI & Automation",
+          "link": "/services/ai-automation"
+        },
+        {
+          "title": "Business Optimization",
+          "link": "/services/business-optimization"
+        }
+      ]
+    },
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Get In Touch"
+  },
+  "footer": {
+    "services": {
+      "title": "Services",
+      "items": [
+        {
+          "title": "Software Development",
+          "link": "/services/software-development"
+        },
+        {
+          "title": "AI Automation",
+          "link": "/services/ai-automation"
+        },
+        {
+          "title": "Business Scaling",
+          "link": "/services/business-optimization"
+        }
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "items": [
+        {
+          "title": "About us",
+          "link": "/about"
+        },
+        {
+          "title": "Contact",
+          "link": "/contact"
+        }
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "items": [
+        {
+          "title": "Terms of use",
+          "link": "#"
+        },
+        {
+          "title": "Privacy policy",
+          "link": "#"
+        }
+      ]
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Scale your business with Intelligent Automation",
+      "description": "Ekselera provides premium software development services to help you automate time-consuming tasks and scale without increasing labour requirements.",
+      "cta": "Get Started"
+    },
+    "valueProp": {
+      "title": "Why Ekselera?",
+      "description": "We focus on automation so you can focus on growth. Stop trading time for money and start leveraging software and AI to multiply your output."
+    },
+    "services": {
+      "title": "Our Services",
+      "items": [
+        {
+          "title": "Software Development",
+          "description": "Custom software solutions tailored to your specific business needs, built with modern technologies for reliability and scale.",
+          "cta": "Learn Now",
+          "link": "/services/software-development"
+        },
+        {
+          "title": "AI & Automation",
+          "description": "Leverage the latest in Artificial Intelligence to automate complex decisions and repetitive workflows.",
+          "cta": "Learn Now",
+          "link": "/services/ai-automation"
+        },
+        {
+          "title": "Business Optimization",
+          "description": "Analyze your current processes and identify bottlenecks that can be eliminated through strategic digital transformation.",
+          "cta": "Learn Now",
+          "link": "/services/business-optimization"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "Ready to scale your business? Get in touch with us today."
+    },
+    "form": {
+      "labels": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "fullName": "Your Name",
+        "email": "email@example.com",
+        "subject": "How can we help?",
+        "message": "Tell us about your project or needs..."
+      },
+      "submitButton": "Send Message"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "description": "Whether you have a specific project in mind or just want to explore how automation can benefit your business, we're here to help.",
+      "email": {
+        "label": "Email",
+        "value": "hello@ekselera.com"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Valletta, Malta"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Ekselera",
+      "description": "Empowering businesses to scale through intelligent automation and software innovation."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "paragraphs": [
+        "At Ekselera, we believe that human potential should be spent on creativity and strategy, not repetitive tasks. Our mission is to provide businesses with the software tools and automation strategies they need to grow exponentially without a linear increase in overhead.",
+        "We combine cutting-edge technology with deep business insight to deliver solutions that are not just technically sound, but commercially transformative."
+      ]
+    },
+    "values": {
+      "title": "Our Core Values",
+      "items": [
+        {
+          "title": "Innovation",
+          "description": "We stay at the forefront of technology to bring the most effective solutions to our clients."
+        },
+        {
+          "title": "Reliability",
+          "description": "We build systems that you can trust to run your business, 24/7/365."
+        },
+        {
+          "title": "Efficiency",
+          "description": "We are obsessed with eliminating waste and optimizing workflows for maximum output."
+        }
+      ]
+    },
+    "team": {
+      "title": "Meet the Team",
+      "members": [
+        {
+          "name": "Andrew Cassar Overend",
+          "role": "Founder & Lead Product",
+          "linkedin": "https://www.linkedin.com/in/andrew-cassar-overend/",
+          "image": "andrew"
+        },
+        {
+          "name": "Daniel Micallef",
+          "role": "Founder & Lead Architect",
+          "linkedin": "https://www.linkedin.com/in/daniel-micallef/",
+          "image": "daniel"
+        }
+      ]
+    }
+  }
+}

@@ -1,18 +1,31 @@
-<footer class="footer p-10 bg-neutral text-neutral-content">
+---
+import content from '../i18n/en.json';
+
+const { title } = content.meta;
+const { services, company, legal } = content.footer;
+---
+
+<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
   <nav>
-    <header class="footer-title">Services</header> 
-    <a href="/services/software-development" class="link link-hover">Software Development</a>
-    <a href="/services/ai-automation" class="link link-hover">AI Automation</a>
-    <a href="/services/business-optimization" class="link link-hover">Business Scaling</a>
-  </nav> 
+    <h6 class="footer-title">{services.title}</h6>
+    {services.items.map((item) => (
+      <a href={item.link} class="link link-hover">{item.title}</a>
+    ))}
+  </nav>
   <nav>
-    <header class="footer-title">Company</header> 
-    <a href="/about" class="link link-hover">About us</a>
-    <a href="/contact" class="link link-hover">Contact</a>
-  </nav> 
+    <h6 class="footer-title">{company.title}</h6>
+    {company.items.map((item) => (
+      <a href={item.link} class="link link-hover">{item.title}</a>
+    ))}
+  </nav>
   <nav>
-    <header class="footer-title">Legal</header> 
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
+    <h6 class="footer-title">{legal.title}</h6>
+    {legal.items.map((item) => (
+      <a href={item.link} class="link link-hover">{item.title}</a>
+    ))}
+  </nav>
+
+  <nav>
+   <span class="text text-sm font-light">{title} © {new Date().getFullYear()} - All rights reserved. Crafted by <a href="https://danielmicallef.xyz" class="font-bold">DM</a></span> 
   </nav>
 </footer>
