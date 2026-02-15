@@ -1,31 +1,25 @@
 ---
 import content from '../i18n/en.json';
 
-const { title } = content.meta;
-const { services, company, legal } = content.footer;
+const { simple } = content.footer;
 ---
 
-<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-  <nav>
-    <h6 class="footer-title">{services.title}</h6>
-    {services.items.map((item) => (
-      <a href={item.link} class="link link-hover">{item.title}</a>
-    ))}
-  </nav>
-  <nav>
-    <h6 class="footer-title">{company.title}</h6>
-    {company.items.map((item) => (
-      <a href={item.link} class="link link-hover">{item.title}</a>
-    ))}
-  </nav>
-  <nav>
-    <h6 class="footer-title">{legal.title}</h6>
-    {legal.items.map((item) => (
-      <a href={item.link} class="link link-hover">{item.title}</a>
-    ))}
-  </nav>
-
-  <nav>
-   <span class="text text-sm font-light">{title} © {new Date().getFullYear()} - All rights reserved. Crafted by <a href="https://danielmicallef.xyz" class="font-bold">DM</a></span> 
-  </nav>
+<footer class="footer border-t border-base-200 bg-base-100 px-6 py-10 text-base-content">
+  <div class="container mx-auto flex w-full flex-col items-center justify-between gap-4 md:flex-row">
+    <p class="text-sm text-base-content/60">
+      {simple.copy.replace('{{year}}', String(new Date().getFullYear()))}
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-6">
+      {simple.links.map((item) => (
+        <a
+          href={item.link}
+          class="link link-hover text-sm text-base-content/70 hover:text-primary"
+          target={item.link.startsWith('http') ? "_blank" : undefined}
+          rel={item.link.startsWith('http') ? "noreferrer" : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
 </footer>

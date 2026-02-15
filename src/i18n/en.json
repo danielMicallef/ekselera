@@ -1,141 +1,405 @@
 {
-  "meta": {
-    "title": "Ekselera",
-    "heading": "Ekselera - Scale your business with Intelligent Automation",
-    "description": "Ekselera provides premium software development services to help you automate time-consuming tasks and scale without increasing labour requirements.",
-    "hero": {
-      "title": "Contact Us",
-      "description": "Ready to scale your business? Get in touch with us today."
-    },
-    "form": {
-      "labels": {
-        "fullName": "Full Name",
-        "email": "Email",
-        "subject": "Subject",
-        "message": "Message"
+  "navbar": {
+    "logo": "ekselera",
+    "links": [
+      {
+        "label": "Services",
+        "href": "/#services"
       },
-      "placeholders": {
-        "fullName": "Your Name",
-        "email": "email@example.com",
-        "subject": "How can we help?",
-        "message": "Tell us about your project or needs..."
+      {
+        "label": "Products",
+        "href": "/#product"
       },
-      "submitButton": "Send Message"
-    },
-    "info": {
-      "title": "Get in Touch",
-      "description": "Whether you have a specific project in mind or just want to explore how automation can benefit your business, we're here to help.",
-      "email": {
-        "label": "Email",
-        "value": "hello@ekselera.com"
-      },
-      "location": {
-        "label": "Location",
-        "value": "Valletta, Malta"
+      {
+        "label": "About",
+        "href": "/#about"
       }
+    ],
+    "cta": {
+      "label": "Reach out \u2192",
+      "href": "/contact"
     }
   },
-  "navbar": {
-    "services": {
-      "title": "Services",
-      "items": [
-        {
-          "title": "Software Development",
-          "link": "/services/software-development"
-        },
-        {
-          "title": "AI & Automation",
-          "link": "/services/ai-automation"
-        },
-        {
-          "title": "Business Optimization",
-          "link": "/services/business-optimization"
-        }
-      ]
-    },
-    "about": "About",
-    "contact": "Contact",
-    "cta": "Get In Touch"
-  },
   "footer": {
-    "services": {
-      "title": "Services",
-      "items": [
+    "simple": {
+      "copy": "\u00a9 {{year}} Ekselera. Built in Malta.",
+      "links": [
         {
-          "title": "Software Development",
-          "link": "/services/software-development"
+          "label": "Services",
+          "link": "/#services"
         },
         {
-          "title": "AI Automation",
-          "link": "/services/ai-automation"
+          "label": "Ziffa",
+          "link": "https://ziffa.io"
         },
         {
-          "title": "Business Scaling",
-          "link": "/services/business-optimization"
-        }
-      ]
-    },
-    "company": {
-      "title": "Company",
-      "items": [
-        {
-          "title": "About us",
-          "link": "/about"
+          "label": "About",
+          "link": "/#about"
         },
         {
-          "title": "Contact",
+          "label": "Contact",
           "link": "/contact"
-        }
-      ]
-    },
-    "legal": {
-      "title": "Legal",
-      "items": [
-        {
-          "title": "Terms of use",
-          "link": "#"
-        },
-        {
-          "title": "Privacy policy",
-          "link": "#"
         }
       ]
     }
   },
   "home": {
     "hero": {
-      "title": "Scale your business with Intelligent Automation",
-      "description": "Ekselera provides premium software development services to help you automate time-consuming tasks and scale without increasing labour requirements.",
-      "cta": "Get Started"
+      "title": "We build the systems that make your business run better",
+      "description": "Ekselera combines economics, data, and AI engineering to build custom workflows that eliminate manual work, maximize efficiency, and empower your business to scale.",
+      "primaryCta": "Reach out \u2192",
+      "primaryLink": "/contact",
+      "secondaryCta": "Check out Ziffa, our flagship product \u2197",
+      "secondaryLink": "https://ziffa.io"
     },
-    "valueProp": {
-      "title": "Why Ekselera?",
-      "description": "We focus on automation so you can focus on growth. Stop trading time for money and start leveraging software and AI to multiply your output."
-    },
-    "services": {
-      "title": "Our Services",
-      "items": [
+    "automate": {
+      "label": "How We Help",
+      "title": "If it can be systemised, it should be.",
+      "subtitle": "We audit your workflows, find the friction, then build the custom systems that remove it. The result? More efficiency, higher margins, and growth without the hiring headache.",
+      "cards": [
         {
-          "title": "Software Development",
-          "description": "Custom software solutions tailored to your specific business needs, built with modern technologies for reliability and scale.",
-          "cta": "Learn Now",
-          "link": "/services/software-development"
+          "icon": "\ud83d\udcc4",
+          "title": "AI Integration",
+          "description": "Identify high-impact opportunities to automate tasks and accelerate workflows with AI",
+          "link": "/services/ai-integration"
         },
         {
-          "title": "AI & Automation",
-          "description": "Leverage the latest in Artificial Intelligence to automate complex decisions and repetitive workflows.",
-          "cta": "Learn Now",
-          "link": "/services/ai-automation"
+          "icon": "\ud83e\udde0",
+          "title": "Business Continuity & Knowledge Capture",
+          "description": "We build documented, repeatable processes into software so your business keeps running when people are sick, leave, or you're ready to step back.",
+          "link": "/services/business-continuity"
         },
         {
-          "title": "Business Optimization",
-          "description": "Analyze your current processes and identify bottlenecks that can be eliminated through strategic digital transformation.",
-          "cta": "Learn Now",
-          "link": "/services/business-optimization"
+          "icon": "\ud83d\udcd0",
+          "title": "Project Feasibility & Investment Appraisal",
+          "description": "Before you invest, know the numbers. We build financial models, cost-benefit analyses, and feasibility studies to guide your decision making.",
+          "link": "/services/feasibility-appraisal"
+        },
+        {
+          "icon": "\ud83d\udcca",
+          "title": "Dashboards & Business Intelligence",
+          "description": "Turn the data you're already sitting on into dashboards that actually drive decisions \u2014 revenue tracking, KPIs, compliance monitoring, client analytics.",
+          "link": "/services/dashboards-bi"
+        },
+        {
+          "icon": "\u2699\ufe0f",
+          "title": "Custom Business Operating Systems",
+          "description": "From inventory to invoicing. We build centralized ERP systems (like our Valletta Glass solution) that act as the digital backbone of your business.",
+          "link": "/services/business-operating-systems"
+        },
+        {
+          "icon": "\ud83c\uddea\ud83c\uddfa",
+          "title": "Grant Application Support",
+          "description": "If your business operates in the EU, you're eligible for funding available for digitalisation, but the applications are time-consuming and technical. We help you identify the right schemes, build the case, and handle the paperwork.",
+          "link": "/services/grant-support"
+        },
+        {
+          "icon": "\ud83d\udd04",
+          "title": "Data Pipelines & System Integration",
+          "description": "We get your accounting software, CRMs, and internal systems to talk to each other with automated sync and reconciliation.",
+          "link": "/services/data-pipelines"
+        },
+        {
+          "icon": "\ud83c\udf10",
+          "title": "Websites & Landing Pages That Convert",
+          "description": "We engineer pages that get found and convert. SEO-optimized structure, strategic messaging, and lead capture designed with behavioral economics and human psychology\u2014not guesswork.",
+          "link": "/services/websites-landing-pages"
         }
       ]
+    },
+    "spotlight": {
+      "badge": "\u26a1 Our Flagship Product",
+      "title": "Ziffa \u2014 Document automation for Finance Teams",
+      "description": "Ziffa plugs into your SharePoint or Google Drive and handles the document chaos \u2014 collecting, chasing, and organising client files so your team doesn't have to.",
+      "features": [
+        "AI-powered document classification & OCR",
+        "Seamless client onboarding",
+        "Works inside your existing file infrastructure",
+        "Built specifically for accountant firms, CSPs and finance teams"
+      ],
+      "rows": [
+        {
+          "name": "Acme Holdings Ltd",
+          "status": "Complete",
+          "tone": "success"
+        },
+        {
+          "name": "Bay Property Group",
+          "status": "3 docs pending",
+          "tone": "warning"
+        },
+        {
+          "name": "MedTech Solutions",
+          "status": "Under review",
+          "tone": "info"
+        },
+        {
+          "name": "Ekselera Ventures",
+          "status": "Complete",
+          "tone": "success"
+        },
+        {
+          "name": "Isla Finance Ltd",
+          "status": "ID required",
+          "tone": "warning"
+        }
+      ],
+      "cta": "Visit Ziffa.io \u2192",
+      "ctaLink": "https://ziffa.io"
+    },
+    "founders": {
+      "label": "Who We Are",
+      "title": "Economics meets engineering",
+      "subtitle": "Our expertise is rooted in operational reality. We've navigated the complexities of government economic models, the standards of regulated industries, the speed of tech startups, and the precision of the investment world to build systems that actually work",
+      "members": [
+        {
+          "initials": "AC",
+          "name": "Andrew Cassar Overend",
+          "role": "CEO \u2014 Strategy & Product",
+          "bio": "Economist turned Entrepreneur - Former Chief Economist at Malta's Ministry of Finance and Former Head of Investments at the National Development Fund. MSc Economics (Durham). Brings deep knowledge of Malta's regulatory environment, strong data skills and real experience building business systems.",
+          "image": "andrew",
+          "linkedin": "https://www.linkedin.com/in/andrew-cassar-overend/",
+          "x": "https://x.com/acassaroverend"
+        },
+        {
+          "initials": "DM",
+          "name": "Daniel Micallef",
+          "role": "CTO \u2014 Engineering",
+          "bio": "Full-stack engineer with over a decade of experience across fintech, gaming, and edge AI. Proficient in multiple technologies, Daniel designs architectures that align with business requirements—delivering robust, cost-effective solutions without unnecessary complexity. At Ekselera, he leads technical strategy, ensuring our products scale with client needs.",
+          "image": "daniel",
+          "linkedin": "https://www.linkedin.com/in/daniel-micallef/",
+          "website": "https://danielmicallef.xyz",
+          "x": "https://x.com/micallef_daniel"
+        }
+      ]
+    },
+    "process": {
+      "label": "How It Works",
+      "title": "Simple to start, built to last",
+      "steps": [
+        {
+          "title": "Tell us what's not working",
+          "description": "Join us in an informal conversation about where your business is losing time, money, or clarity \u2014 and what you wish worked better."
+        },
+        {
+          "title": "We scope the right solution",
+          "description": "Could be a dashboard. Could be a full system. Could be a grant application that funds the whole thing. We recommend what fits."
+        },
+        {
+          "title": "We build it and stick around",
+          "description": "Go live with support. We monitor, refine, and expand as your needs grow."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to stop drowning in manual work?",
+      "description": "Reach out to us to see how we can help you. We'll identify your biggest automation opportunity \u2014 and show you what it would look like.",
+      "primaryCta": "Reach out \u2192",
+      "primaryLink": "/contact",
+      "secondaryCta": "hello@ekselera.com",
+      "secondaryLink": "mailto:hello@ekselera.com"
     }
   },
+  "servicePages": [
+    {
+      "slug": "software-development",
+      "title": "Software Development",
+      "description": "Custom software solutions tailored to your specific business needs, built with modern technologies for reliability and scale.",
+      "overview": "We design and build reliable software that fits how your business actually operates. From internal tools to customer portals, we deliver systems that are secure, scalable, and easy to evolve as your needs grow.",
+      "benefits": [
+        "Replace manual steps with dependable workflows",
+        "Scale confidently with clean, maintainable architecture",
+        "Improve customer experience with tailored features",
+        "Reduce operational risk with secure, tested builds"
+      ],
+      "offers": [
+        "Custom web and mobile app development",
+        "API integration and backend systems",
+        "Legacy system modernization",
+        "Cloud-native solutions and infrastructure"
+      ]
+    },
+    {
+      "slug": "ai-automation",
+      "title": "AI & Automation",
+      "description": "Leverage the latest in Artificial Intelligence to automate complex decisions and repetitive workflows.",
+      "overview": "We make AI practical for real businesses. Our team designs automation that reduces manual work, improves decision-making, and delivers measurable gains without overhauling how you operate.",
+      "benefits": [
+        "Automate repetitive tasks without breaking existing workflows",
+        "Improve decision quality using data-driven models",
+        "Speed up processing times and reduce backlogs",
+        "Create scalable systems that grow with you"
+      ],
+      "offers": [
+        "AI readiness audit and roadmap for small teams",
+        "Intelligent chatbots and virtual assistants",
+        "Predictive analytics and data mining",
+        "End-to-end workflow orchestration"
+      ]
+    },
+    {
+      "slug": "business-optimization",
+      "title": "Business Optimization",
+      "description": "Analyze your current processes and identify bottlenecks that can be eliminated through strategic digital transformation.",
+      "overview": "We diagnose friction in your operations and design improvements that deliver better margins and smoother execution. Andrew’s economic and investment background ensures the changes make commercial sense.",
+      "benefits": [
+        "Reveal bottlenecks that drain time and budget",
+        "Prioritize high-ROI improvements",
+        "Standardize operations across teams",
+        "Build a clear roadmap for digital transformation"
+      ],
+      "offers": [
+        "Workflow analysis and optimization",
+        "Digital transformation strategy",
+        "Performance monitoring and reporting",
+        "Technology stack consulting"
+      ]
+    },
+    {
+      "slug": "ai-integration",
+      "title": "AI Integration",
+      "description": "Identify high-impact opportunities to automate tasks and accelerate workflows with AI.",
+      "overview": "We integrate AI into the processes that matter most, focusing on practical, reliable deployments that create immediate efficiency gains.",
+      "benefits": [
+        "Automate repetitive work without disrupting teams",
+        "Increase accuracy with machine-assisted decisioning",
+        "Shorten turnaround times on data-heavy tasks",
+        "Enable scale without proportional headcount growth"
+      ],
+      "offers": [
+        "AI opportunity audit and prioritization",
+        "Model selection and workflow design",
+        "Custom integrations with existing systems",
+        "Monitoring, tuning, and ongoing support"
+      ]
+    },
+    {
+      "slug": "business-continuity",
+      "title": "Business Continuity & Knowledge Capture",
+      "description": "We build documented, repeatable processes into software so your business keeps running when people are sick, leave, or you're ready to step back.",
+      "overview": "We capture institutional knowledge and embed it into systems so critical workflows keep moving regardless of staff changes or absences.",
+      "benefits": [
+        "Reduce key-person risk and operational fragility",
+        "Speed up onboarding with documented workflows",
+        "Keep quality consistent across teams",
+        "Maintain compliance and audit readiness"
+      ],
+      "offers": [
+        "Process discovery and documentation",
+        "Automation of repeatable handoffs",
+        "Centralized knowledge bases",
+        "Training and change management support"
+      ]
+    },
+    {
+      "slug": "feasibility-appraisal",
+      "title": "Project Feasibility & Investment Appraisal",
+      "description": "Before you invest, know the numbers. We build financial models, cost-benefit analyses, and feasibility studies to guide your decision making.",
+      "overview": "We combine data modeling with commercial insight to validate whether a project is viable, fundable, and worth the investment.",
+      "benefits": [
+        "De-risk major investments and new initiatives",
+        "Clarify ROI and payback timelines",
+        "Create data-backed decision frameworks",
+        "Improve stakeholder confidence and alignment"
+      ],
+      "offers": [
+        "Financial modeling and scenario planning",
+        "Cost-benefit and sensitivity analysis",
+        "Investment appraisal reports",
+        "Funding and stakeholder-ready documentation"
+      ]
+    },
+    {
+      "slug": "dashboards-bi",
+      "title": "Dashboards & Business Intelligence",
+      "description": "Turn the data you're already sitting on into dashboards that actually drive decisions — revenue tracking, KPIs, compliance monitoring, client analytics.",
+      "overview": "We connect your data sources and design dashboards that bring clarity to performance, compliance, and growth metrics.",
+      "benefits": [
+        "See critical KPIs in real time",
+        "Align teams around a single source of truth",
+        "Reduce manual reporting effort",
+        "Spot risks and opportunities faster"
+      ],
+      "offers": [
+        "Data modeling and KPI definition",
+        "Custom dashboards and reporting",
+        "Automated data refresh pipelines",
+        "Access controls and governance"
+      ]
+    },
+    {
+      "slug": "business-operating-systems",
+      "title": "Custom Business Operating Systems",
+      "description": "From inventory to invoicing. We build centralized ERP systems that act as the digital backbone of your business.",
+      "overview": "We build tailored operating systems that unify workflows, eliminate duplication, and provide a clear audit trail across departments.",
+      "benefits": [
+        "Unify scattered processes into one system",
+        "Reduce errors with consistent data flows",
+        "Scale operations without operational chaos",
+        "Gain full visibility across teams"
+      ],
+      "offers": [
+        "Requirements mapping and system design",
+        "Bespoke ERP and internal tools",
+        "Integration with finance and CRM systems",
+        "Training and long-term support"
+      ]
+    },
+    {
+      "slug": "grant-support",
+      "title": "Grant Application Support",
+      "description": "We help you identify the right schemes, build the case, and handle the paperwork for EU funding.",
+      "overview": "We guide you through digitalisation grant applications with clear financial logic, strong narratives, and complete documentation.",
+      "benefits": [
+        "Increase approval odds with robust submissions",
+        "Save time on complex paperwork",
+        "Secure funding for automation initiatives",
+        "Avoid costly application mistakes"
+      ],
+      "offers": [
+        "Grant eligibility and scheme matching",
+        "Business case and budget development",
+        "Application drafting and compliance review",
+        "Submission and follow-up coordination"
+      ]
+    },
+    {
+      "slug": "data-pipelines",
+      "title": "Data Pipelines & System Integration",
+      "description": "We get your accounting software, CRMs, and internal systems to talk to each other with automated sync and reconciliation.",
+      "overview": "We connect your systems so data flows automatically, reducing manual reconciliations and improving accuracy.",
+      "benefits": [
+        "Create a single source of truth across tools",
+        "Automate reconciliations and syncing",
+        "Improve data accuracy and timeliness",
+        "Reduce operational overhead"
+      ],
+      "offers": [
+        "Integration mapping and architecture",
+        "API, ETL, and data pipeline builds",
+        "Validation and error handling",
+        "Monitoring and ongoing maintenance"
+      ]
+    },
+    {
+      "slug": "websites-landing-pages",
+      "title": "Websites & Landing Pages That Convert",
+      "description": "We engineer pages that get found and convert with SEO-ready structure and conversion-focused messaging.",
+      "overview": "We build high-performing websites that combine strategy, messaging, and technical execution to turn visitors into leads. Using Astro, pages load almost instantly, improving SEO and reducing bounce rates.",
+      "benefits": [
+        "Increase conversion rates with focused messaging",
+        "Improve SEO visibility and discoverability",
+        "Launch quickly with scalable foundations",
+        "Track and optimize performance over time"
+      ],
+      "offers": [
+        "Messaging, structure, and user journey design",
+        "Design and development of landing pages",
+        "Analytics setup and conversion tracking",
+        "Ongoing optimization and iteration"
+      ]
+    }
+  ],
   "contact": {
     "hero": {
       "title": "Contact Us",
@@ -167,56 +431,6 @@
         "label": "Location",
         "value": "Valletta, Malta"
       }
-    }
-  },
-  "about": {
-    "hero": {
-      "title": "About Ekselera",
-      "description": "Empowering businesses to scale through intelligent automation and software innovation."
-    },
-    "mission": {
-      "title": "Our Mission",
-      "paragraphs": [
-        "At Ekselera, we believe that human potential should be spent on creativity and strategy, not repetitive tasks. Our mission is to provide businesses with the software tools and automation strategies they need to grow exponentially without a linear increase in overhead.",
-        "We combine cutting-edge technology with deep business insight to deliver solutions that are not just technically sound, but commercially transformative."
-      ]
-    },
-    "values": {
-      "title": "Our Core Values",
-      "items": [
-        {
-          "title": "Innovation",
-          "description": "We stay at the forefront of technology to bring the most effective solutions to our clients."
-        },
-        {
-          "title": "Reliability",
-          "description": "We build systems that you can trust to run your business, 24/7/365."
-        },
-        {
-          "title": "Efficiency",
-          "description": "We are obsessed with eliminating waste and optimizing workflows for maximum output."
-        }
-      ]
-    },
-    "team": {
-      "title": "Meet the Team",
-      "members": [
-        {
-          "name": "Andrew Cassar Overend",
-          "role": "Founder & Lead Product",
-          "linkedin": "https://www.linkedin.com/in/andrew-cassar-overend/",
-          "x": "https://x.com/acassaroverend",
-          "image": "andrew"
-        },
-        {
-          "name": "Daniel Micallef",
-          "role": "Founder & Lead Architect",
-          "linkedin": "https://www.linkedin.com/in/daniel-micallef/",
-          "website": "https://danielmicallef.xyz",
-          "x": "https://x.com/micallef_daniel",
-          "image": "daniel"
-        }
-      ]
     }
   }
 }

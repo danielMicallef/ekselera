@@ -6,86 +6,150 @@ const { hero, form, info } = content.contact;
 ---
 
 <Layout>
-  <div class="hero min-h-[40vh] bg-gradient-to-br from-primary/50 to-secondary/90 text-primary-content">
+  <div class="hero bg-base-100 pt-28 pb-12 border-b border-base-200">
     <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="text-5xl font-bold">{hero.title}</h1>
-        <p class="py-6 text-xl opacity-90">{hero.description}</p>
+      <div class="max-w-2xl">
+        <h1 class="font-display text-4xl font-bold text-base-content sm:text-5xl">
+          {hero.title}
+        </h1>
+        <p class="py-6 text-lg text-base-content/70 sm:text-xl">
+          {hero.description}
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="container mx-auto px-4 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+  <section class="bg-base-200 py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
       <!-- Contact Form -->
-      <div class="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-        <form action="https://formspree.io/f/mzzjnleq" method="POST" class="card-body">
+      <div class="card flex-shrink-0 w-full border border-base-200 bg-base-100 shadow-sm">
+        <form id="contact-form" action="https://formspree.io/f/mzzjnleq" method="POST" class="card-body gap-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="form-control">
               <label class="label">
                 <span class="label-text font-semibold">{form.labels.fullName}</span>
               </label>
-              <input type="text" name="fullName" placeholder={form.placeholders.fullName} class="input input-bordered w-full" required />
+              <input
+                type="text"
+                name="fullName"
+                placeholder={form.placeholders.fullName}
+                class="input input-bordered w-full"
+                required
+              />
             </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text font-semibold">{form.labels.email}</span>
               </label>
-              <input type="email" name="email" placeholder={form.placeholders.email} class="input input-bordered w-full" required />
+              <input
+                type="email"
+                name="email"
+                placeholder={form.placeholders.email}
+                class="input input-bordered w-full"
+                required
+              />
             </div>
           </div>
-          <div class="form-control mt-4">
+          <div class="form-control">
             <label class="label">
               <span class="label-text font-semibold">{form.labels.subject}</span>
             </label>
-            <input type="text" name="subject" placeholder={form.placeholders.subject} class="input input-bordered w-full" required />
+            <input
+              type="text"
+              name="subject"
+              placeholder={form.placeholders.subject}
+              class="input input-bordered w-full"
+              required
+            />
           </div>
-          <div class="form-control mt-4">
+          <div class="form-control">
             <label class="label">
               <span class="label-text font-semibold">{form.labels.message}</span>
             </label>
-            <textarea name="message" class="textarea textarea-bordered h-32 w-full" placeholder={form.placeholders.message} required></textarea>
+            <textarea
+              name="message"
+              class="textarea textarea-bordered h-32 w-full"
+              placeholder={form.placeholders.message}
+              required
+            ></textarea>
           </div>
-          <div class="form-control mt-8">
-            <button class="btn btn-primary btn-block">{form.submitButton}</button>
+          <div id="form-status" class="alert hidden" role="status" aria-live="polite"></div>
+          <div class="form-control">
+            <button type="submit" class="btn btn-primary btn-block">{form.submitButton}</button>
           </div>
         </form>
       </div>
 
       <!-- Contact Info -->
-      <div class="flex flex-col justify-center">
-        <h2 class="text-3xl font-bold mb-8">{info.title}</h2>
-        <p class="text-lg mb-8 leading-relaxed">
-          {info.description}
-        </p>
-
-        <div class="space-y-6">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-bold">{info.email.label}</h3>
-              <p>{info.email.value}</p>
-            </div>
+      <div class="card border border-base-200 bg-base-100 shadow-sm">
+        <div class="card-body gap-6">
+          <div>
+            <h2 class="font-display text-3xl font-bold text-base-content">{info.title}</h2>
+            <p class="mt-4 text-base-content/70 leading-relaxed">
+              {info.description}
+            </p>
           </div>
 
-           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="badge badge-lg border-none bg-primary/10 text-primary">
+                @
+              </div>
+              <div>
+                <h3 class="font-semibold">{info.email.label}</h3>
+                <p class="text-base-content/70">{info.email.value}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-bold">{info.location.label}</h3>
-              <p>{info.location.value}</p>
+
+            <div class="flex items-start gap-4">
+              <div class="badge badge-lg border-none bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">{info.location.label}</h3>
+                <p class="text-base-content/70">{info.location.value}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+
+    const setStatus = (message, type) => {
+      if (!statusEl) return;
+      statusEl.className = `alert ${type ? `alert-${type}` : ''}`;
+      statusEl.textContent = message;
+    };
+
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      setStatus('Sending your message...', 'info');
+      const formData = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { Accept: 'application/json' },
+        });
+        if (response.ok) {
+          form.reset();
+          setStatus('Thanks! We received your message.', 'success');
+        } else {
+          setStatus('Something went wrong. Please try again.', 'error');
+        }
+      } catch (error) {
+        setStatus('Network error. Please try again.', 'error');
+      }
+    });
+  </script>
 </Layout>

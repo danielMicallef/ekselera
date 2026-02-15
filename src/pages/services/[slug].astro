@@ -1,45 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import content from '../../i18n/en.json';
 
 export async function getStaticPaths() {
-  const services = [
-    {
-      slug: 'software-development',
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your specific business needs, built with modern technologies for reliability and scale.',
-      details: [
-        'Custom Web & Mobile App Development',
-        'API Integration & Development',
-        'Legacy System Modernization',
-        'Cloud-Native Solutions'
-      ],
-      content: 'We build robust, scalable, and secure software solutions that drive business growth. Whether you need a customer-facing portal, an internal tool, or a complete digital transformation, our team has the expertise to deliver high-quality code that stands the test of time.'
-    },
-    {
-      slug: 'ai-automation',
-      title: 'AI & Automation',
-      description: 'Leverage the latest in Artificial Intelligence to automate complex decisions and repetitive workflows.',
-      details: [
-        'Intelligent Chatbots & Virtual Assistants',
-        'Robotic Process Automation (RPA)',
-        'Predictive Analytics & Data Mining',
-        'Automated Workflow Orchestration'
-      ],
-      content: 'Unlock the power of your data and free up your workforce from mundane tasks. Our AI and automation solutions are designed to enhance human decision-making and streamline operations, allowing you to focus on strategy and innovation.'
-    },
-    {
-      slug: 'business-optimization',
-      title: 'Business Optimization',
-      description: 'Analyze your current processes and identify bottlenecks that can be eliminated through strategic digital transformation.',
-      details: [
-        'Workflow Analysis & optimization',
-        'Digital Transformation Strategy',
-        'Performance Monitoring & Reporting',
-        'Technology Stack Consulting'
-      ],
-      content: 'Efficiency is key to profitability. We analyze your existing business processes to identify inefficiencies and implement technology-driven solutions that reduce costs, improve speed, and enhance overall organizational performance.'
-    }
-  ];
+  const services = content.servicePages;
 
   return services.map(service => ({
     params: { slug: service.slug },
@@ -51,39 +15,43 @@ const { service } = Astro.props;
 ---
 
 <Layout>
-  <div class="hero min-h-[40vh] bg-gradient-to-br from-primary/50 to-secondary/90 ">
+  <div class="hero bg-base-100 pt-28 pb-12 border-b border-base-200">
     <div class="hero-content text-center">
       <div class="max-w-2xl">
-        <h1 class="text-5xl font-bold">{service.title}</h1>
-        <p class="py-6 text-xl">{service.description}</p>
+        <h1 class="font-display text-4xl font-bold text-base-content sm:text-5xl">
+          {service.title}
+        </h1>
+        <p class="py-6 text-lg text-base-content/70 sm:text-xl">
+          {service.description}
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="container mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+  <section class="bg-base-200 py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
       <div>
-        <h2 class="text-3xl font-bold mb-6">Overview</h2>
-        <p class="text-lg mb-6 leading-relaxed">
-          {service.content}
+        <h2 class="font-display text-3xl font-bold mb-6">Overview</h2>
+        <p class="text-lg mb-6 leading-relaxed text-base-content/80">
+          {service.overview}
         </p>
         <div class="card bg-base-100 shadow-lg border border-base-200">
           <div class="card-body">
              <h3 class="card-title text-primary">Key Benefits</h3>
              <ul class="list-disc list-inside mt-2 space-y-2">
-               <li>Increase operational efficiency</li>
-               <li>Reduce manual error rates</li>
-               <li>Scale without adding headcount</li>
-               <li>Improve customer satisfaction</li>
+               {service.benefits.map((benefit) => (
+                 <li>{benefit}</li>
+               ))}
              </ul>
           </div>
         </div>
       </div>
 
       <div class="bg-base-100 p-8 rounded-box shadow-xl border border-base-200">
-        <h3 class="text-2xl font-bold mb-6">What We Offer</h3>
+        <h3 class="font-display text-2xl font-bold mb-6">What We Offer</h3>
         <ul class="space-y-4">
-          {service.details.map(item => (
+          {service.offers.map(item => (
             <li class="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -98,5 +66,6 @@ const { service } = Astro.props;
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </section>
 </Layout>

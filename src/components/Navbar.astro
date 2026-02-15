@@ -1,50 +1,36 @@
 ---
 import content from '../i18n/en.json';
 
-const { title } = content.meta;
-const { services, about, contact, cta } = content.navbar;
+const { logo, links, cta } = content.navbar;
 ---
 
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar fixed top-0 left-0 right-0 z-50 h-16 bg-base-100/90 backdrop-blur border-b border-base-200">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
       </div>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li>
-          <a>{services.title}</a>
-          <ul class="p-2">
-            {services.items.map((item) => (
-              <li><a href={item.link}>{item.title}</a></li>
-            ))}
-          </ul>
-        </li>
-        <li><a href="/about">{about}</a></li>
-        <li><a href="/contact">{contact}</a></li>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
+        {links.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+        <li><a href={cta.href} class="text-primary font-semibold">{cta.label}</a></li>
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost text-xl">{title}</a>
+    <a href="/" class="btn btn-ghost text-xl font-bold tracking-tight normal-case">
+      {logo}
+      <span class="text-primary">.</span>
+    </a>
   </div>
 
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li>
-        <details>
-          <summary>{services.title}</summary>
-          <ul class="p-2 bg-base-100 rounded-t-none w-52 z-[1] shadow">
-            {services.items.map((item) => (
-              <li><a href={item.link}>{item.title}</a></li>
-            ))}
-          </ul>
-        </details>
-      </li>
-      <li><a href="/about">{about}</a></li>
-      <li><a href="/contact">{contact}</a></li>
+  <div class="navbar-end gap-2">
+    <ul class="menu menu-horizontal hidden lg:flex gap-2 px-1">
+      {links.map((link) => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
     </ul>
-  </div>
-
-  <div class="navbar-end">
-    <a href="/contact" class="btn btn-primary">{cta}</a>
+    <a href={cta.href} class="btn btn-primary btn-sm">{cta.label}</a>
   </div>
 </div>
