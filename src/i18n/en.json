@@ -202,60 +202,6 @@
   },
   "servicePages": [
     {
-      "slug": "software-development",
-      "title": "Software Development",
-      "description": "Custom software solutions tailored to your specific business needs, built with modern technologies for reliability and scale.",
-      "overview": "We design and build reliable software that fits how your business actually operates. From internal tools to customer portals, we deliver systems that are secure, scalable, and easy to evolve as your needs grow.",
-      "benefits": [
-        "Replace manual steps with dependable workflows",
-        "Scale confidently with clean, maintainable architecture",
-        "Improve customer experience with tailored features",
-        "Reduce operational risk with secure, tested builds"
-      ],
-      "offers": [
-        "Custom web and mobile app development",
-        "API integration and backend systems",
-        "Legacy system modernization",
-        "Cloud-native solutions and infrastructure"
-      ]
-    },
-    {
-      "slug": "ai-automation",
-      "title": "AI & Automation",
-      "description": "Leverage the latest in Artificial Intelligence to automate complex decisions and repetitive workflows.",
-      "overview": "We make AI practical for real businesses. Our team designs automation that reduces manual work, improves decision-making, and delivers measurable gains without overhauling how you operate.",
-      "benefits": [
-        "Automate repetitive tasks without breaking existing workflows",
-        "Improve decision quality using data-driven models",
-        "Speed up processing times and reduce backlogs",
-        "Create scalable systems that grow with you"
-      ],
-      "offers": [
-        "AI readiness audit and roadmap for small teams",
-        "Intelligent chatbots and virtual assistants",
-        "Predictive analytics and data mining",
-        "End-to-end workflow orchestration"
-      ]
-    },
-    {
-      "slug": "business-optimization",
-      "title": "Business Optimization",
-      "description": "Analyze your current processes and identify bottlenecks that can be eliminated through strategic digital transformation.",
-      "overview": "We diagnose friction in your operations and design improvements that deliver better margins and smoother execution. Andrew’s economic and investment background ensures the changes make commercial sense.",
-      "benefits": [
-        "Reveal bottlenecks that drain time and budget",
-        "Prioritize high-ROI improvements",
-        "Standardize operations across teams",
-        "Build a clear roadmap for digital transformation"
-      ],
-      "offers": [
-        "Workflow analysis and optimization",
-        "Digital transformation strategy",
-        "Performance monitoring and reporting",
-        "Technology stack consulting"
-      ]
-    },
-    {
       "slug": "ai-integration",
       "title": "AI Integration",
       "description": "Identify high-impact opportunities to automate tasks and accelerate workflows with AI.",
