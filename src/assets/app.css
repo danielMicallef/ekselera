@@ -1,4 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap");
 @import "tailwindcss";
 @plugin "daisyui"{
-   themes: light --default, dark --prefersdark, bumblebee;
+   themes: light --default, dark --prefersdark, ekselera;
  }
+
+@layer base {
+  :root:has(input.theme-controller[value=ekselera]:checked),
+  [data-theme="ekselera"] {
+    color-scheme: light;
+    --color-base-100: #ffffff;
+    --color-base-200: #f1f5f9;
+    --color-base-300: #e2e8f0;
+    --color-base-content: #0a0f1a;
+    --color-primary: #1a56db;
+    --color-primary-content: #ffffff;
+    --color-secondary: #f59e0b;
+    --color-secondary-content: #0a0f1a;
+    --color-accent: #059669;
+    --color-accent-content: #ffffff;
+    --color-neutral: #0a0f1a;
+    --color-neutral-content: #ffffff;
+    --color-info: #1a56db;
+    --color-info-content: #ffffff;
+    --color-success: #059669;
+    --color-success-content: #ffffff;
+    --color-warning: #f59e0b;
+    --color-warning-content: #0a0f1a;
+    --color-error: #ef4444;
+    --color-error-content: #ffffff;
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.625rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+  }
+
+  :root:has(input.theme-controller[value=ziffa-dark]:checked),
+  [data-theme="ziffa-dark"] {
+    color-scheme: dark;
+    --color-primary: #c9a227;
+    --color-primary-content: #0d1117;
+    --color-secondary: #fafaf9;
+    --color-secondary-content: #0d1117;
+    --color-accent: #c9a227;
+    --color-accent-content: #0d1117;
+    --color-neutral: #1c2128;
+    --color-neutral-content: #adbac7;
+    --color-base-100: #0d1117;
+    --color-base-200: #161b22;
+    --color-base-300: #21262d;
+    --color-base-content: #adbac7;
+    --color-info: #3b82f6;
+    --color-info-content: #ffffff;
+    --color-success: #2ea043;
+    --color-success-content: #ffffff;
+    --color-warning: #f59e0b;
+    --color-warning-content: #000000;
+    --color-error: #c94a4a;
+    --color-error-content: #ffffff;
+    --radius-box: 1rem;
+    --radius-btn: 0.5rem;
+    --radius-badge: 1.9rem;
+    --animation-btn: 0.2s;
+    --animation-input: 0.2s;
+    --btn-focus-scale: 0.98;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+}

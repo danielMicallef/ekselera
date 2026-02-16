@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
 <!doctype html>
-<html lang="en" data-theme="bumblebee">
+<html lang="en" data-theme="ekselera">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Ekselera - Automate & Scale</title>
 	</head>
-	<body class="min-h-screen flex flex-col">
+	<body class="min-h-screen flex flex-col bg-base-100 text-base-content">
 		<Navbar />
 		<main class="flex-grow">
 			<slot />
@@ -20,4 +20,3 @@ import Footer from "../components/Footer.astro";
 		<Footer />
 	</body>
 </html>
-
