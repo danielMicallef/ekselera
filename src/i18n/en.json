@@ -84,7 +84,7 @@
         {
           "icon": "\u2699\ufe0f",
           "title": "Custom Business Operating Systems",
-          "description": "From inventory to invoicing. We build centralized ERP systems (like our Valletta Glass solution) that act as the digital backbone of your business.",
+          "description": "From inventory to invoicing. We build centralized ERP systems that act as the digital backbone of your business.",
           "link": "/services/business-operating-systems"
         },
         {
@@ -375,7 +375,7 @@
       },
       "location": {
         "label": "Location",
-        "value": "Valletta, Malta"
+        "value": "Birkirkara, Malta"
       }
     }
   }
