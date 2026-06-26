@@ -5,21 +5,26 @@ const { simple } = content.footer;
 ---
 
 <footer class="footer border-t border-base-200 bg-base-100 px-6 py-10 text-base-content">
-  <div class="container mx-auto flex w-full flex-col items-center justify-between gap-4 md:flex-row">
-    <p class="text-sm text-base-content/60">
-      {simple.copy.replace('{{year}}', String(new Date().getFullYear()))}
-    </p>
-    <div class="flex flex-wrap items-center justify-center gap-6">
-      {simple.links.map((item) => (
-        <a
-          href={item.link}
-          class="link link-hover text-sm text-base-content/70 hover:text-primary"
-          target={item.link.startsWith('http') ? "_blank" : undefined}
-          rel={item.link.startsWith('http') ? "noreferrer" : undefined}
-        >
-          {item.label}
-        </a>
-      ))}
+  <div class="container mx-auto w-full">
+    <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <p class="text-sm text-base-content/60">
+        {simple.copy.replace('{{year}}', String(new Date().getFullYear()))}
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        {simple.links.map((item) => (
+          <a
+            href={item.link}
+            class="link link-hover text-sm text-base-content/70 hover:text-primary"
+            target={item.link.startsWith('http') ? "_blank" : undefined}
+            rel={item.link.startsWith('http') ? "noreferrer" : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
     </div>
+    <p class="mt-8 max-w-5xl text-sm leading-6 text-base-content/60">
+      Ekselera takes unstructured information and turns it into reliable, decision-making information. Its flagship product is Ziffa, document automation for Maltese accounting firms and CSPs. Built in Malta.
+    </p>
   </div>
 </footer>

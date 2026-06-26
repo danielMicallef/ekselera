@@ -3,12 +3,20 @@
     "logo": "ekselera",
     "links": [
       {
-        "label": "Services",
-        "href": "/#services"
+        "label": "The problem",
+        "href": "/#problem"
       },
       {
-        "label": "Products",
-        "href": "/#product"
+        "label": "What we do",
+        "href": "/#solution"
+      },
+      {
+        "label": "Who it's for",
+        "href": "/#industries"
+      },
+      {
+        "label": "Ziffa",
+        "href": "/#ziffa"
       },
       {
         "label": "About",
@@ -16,17 +24,17 @@
       }
     ],
     "cta": {
-      "label": "Reach out \u2192",
-      "href": "/contact"
+      "label": "Reach out",
+      "href": "mailto:info@ekselera.com"
     }
   },
   "footer": {
     "simple": {
-      "copy": "\u00a9 {{year}} Ekselera. Built in Malta.",
+      "copy": "\u00a9 {{year}} Ekselera Ventures. Built in Malta, European Union.",
       "links": [
         {
           "label": "Services",
-          "link": "/#services"
+          "link": "/#solution"
         },
         {
           "label": "Ziffa",
@@ -38,7 +46,7 @@
         },
         {
           "label": "Contact",
-          "link": "/contact"
+          "link": "mailto:info@ekselera.com"
         }
       ]
     }
@@ -109,13 +117,13 @@
     },
     "spotlight": {
       "badge": "\u26a1 Our Flagship Product",
-      "title": "Ziffa \u2014 Document automation for Finance Teams",
+      "title": "Ziffa \u2014 Document automation for Maltese accounting firms & CSPs",
       "description": "Ziffa plugs into your SharePoint or Google Drive and handles the document chaos \u2014 collecting, chasing, and organising client files so your team doesn't have to.",
       "features": [
         "AI-powered document classification & OCR",
         "Seamless client onboarding",
         "Works inside your existing file infrastructure",
-        "Built specifically for accountant firms, CSPs and finance teams"
+        "Built specifically for Maltese accounting firms and CSPs"
       ],
       "rows": [
         {
@@ -196,8 +204,8 @@
       "description": "Reach out to us to see how we can help you. We'll identify your biggest automation opportunity \u2014 and show you what it would look like.",
       "primaryCta": "Reach out \u2192",
       "primaryLink": "/contact",
-      "secondaryCta": "hello@ekselera.com",
-      "secondaryLink": "mailto:hello@ekselera.com"
+      "secondaryCta": "info@ekselera.com",
+      "secondaryLink": "mailto:info@ekselera.com"
     }
   },
   "servicePages": [
@@ -348,8 +356,8 @@
   ],
   "contact": {
     "hero": {
-      "title": "Contact Us",
-      "description": "Ready to scale your business? Get in touch with us today."
+      "title": "Reach out",
+      "description": "A short conversation will show where scattered information is costing you time, accuracy, and speed."
     },
     "form": {
       "labels": {
@@ -364,14 +372,14 @@
         "subject": "How can we help?",
         "message": "Tell us about your project or needs..."
       },
-      "submitButton": "Send Message"
+      "submitButton": "Send message"
     },
     "info": {
-      "title": "Get in Touch",
-      "description": "Whether you have a specific project in mind or just want to explore how automation can benefit your business, we're here to help.",
+      "title": "Ready to trust the information you run on?",
+      "description": "Tell us what information your team has to read, check, and act on. We'll help you identify where a decision-grade system could remove manual work and risk.",
       "email": {
         "label": "Email",
-        "value": "hello@ekselera.com"
+        "value": "info@ekselera.com"
       },
       "location": {
         "label": "Location",

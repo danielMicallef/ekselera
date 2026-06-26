@@ -2,15 +2,47 @@
 import "../assets/app.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	ogImage?: string;
+	jsonLd?: unknown;
+}
+
+const {
+	title = "Ekselera - Automate & Scale",
+	description = "Ekselera builds systems that eliminate manual work and help organisations scale.",
+	canonical,
+	ogImage = "https://ekselera.com/og-image.png",
+	jsonLd,
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en" data-theme="ekselera">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+		<meta name="theme-color" content="#ffffff" />
+		{canonical && <link rel="canonical" href={canonical} />}
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Ekselera" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		{canonical && <meta property="og:url" content={canonical} />}
+		<meta property="og:image" content={ogImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
 		<!-- <link rel="icon" type="image/png" href="/icon.png" /> -->
 		<meta name="generator" content={Astro.generator} />
-		<title>Ekselera - Automate & Scale</title>
+		<title>{title}</title>
+		{jsonLd && (
+			<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+		)}
 	</head>
 	<body class="min-h-screen flex flex-col bg-base-100 text-base-content">
 		<Navbar />

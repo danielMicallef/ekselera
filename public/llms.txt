@@ -1,0 +1,36 @@
+# Ekselera
+
+> Ekselera is a Malta-based company that turns unstructured information — documents, images, video and scattered records — into reliable information organisations can act on with confidence. Its flagship product is Ziffa, document automation for Maltese accounting firms and Corporate Service Providers (CSPs).
+
+Ekselera Ventures is the company. Ziffa is its flagship product. The base is Malta.
+
+## What Ekselera does
+- Reads unstructured data of any kind — documents, images, video, scanned paper, scattered records; any format, any channel.
+- Extracts the information that actually matters and checks it is correct.
+- Delivers reliable, decision-grade information inside the systems an organisation already uses — no migration, a layer on top, not a replacement.
+- The differentiator: most tools digitise data; Ekselera makes it trustworthy enough to act on. "Most tools give you data. We give you decisions you can trust."
+
+## Who it is for
+Sectors where being wrong is expensive:
+- Government & public bodies — applications and case files vetted and processed for faster, more consistent decisions.
+- Logistics & shipping — bills of lading, customs paperwork, manifests read and reconciled with an audit trail.
+- Legal & notarial — contracts, deeds and due-diligence packs; the clauses, dates and facts surfaced.
+- Aviation — manifests, load plans, ULD and maintenance records turned into live operational data.
+- Manufacturing — work orders, job cards, machine logs and supplier reports turned into clear operational information.
+- Real estate — listings, lease expiries, permits and location data turned into first-mover signals.
+- Accounting firms & CSPs — served by the flagship product, Ziffa.
+
+## Flagship product: Ziffa
+- Ziffa (https://ziffa.io/) is document automation for Maltese accounting firms and CSPs.
+- It collects, checks and files client documents into the firm's own SharePoint or Google Drive.
+- It understands 140+ Maltese document types and is live across hundreds of client entities.
+
+## Company facts
+- Legal entity: Ekselera Ventures. Based in Malta, European Union. VAT MT32680130.
+- Founders: Andrew Cassar Overend (Founder & CEO — former Chief Economist at Malta's Ministry of Finance; former Head of Investments at Malta's National Development and Social Fund; MSc Economics, Durham) and Daniel Micallef (Co-founder & CTO — full-stack engineer, 10+ years across fintech, gaming and edge AI).
+- Category: AI document & data automation, intelligent document processing.
+
+## Links
+- Website: https://ekselera.com/
+- Product: https://ziffa.io/
+- Contact: info@ekselera.com
