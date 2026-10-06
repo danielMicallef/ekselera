@@ -132,7 +132,7 @@ if (!dry) {
     manifestPath,
     JSON.stringify(
       {
-        version: "1.0.0",
+        version: "1.0.1",
         files: Object.fromEntries(
           [...contents].map(([path, bytes]) => [path, sha(bytes)]),
         ),

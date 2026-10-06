@@ -1,6 +1,6 @@
 # Latest Updates operations guide
 
-Module version: **1.0.0**. Canonical source: Ekselera `src/features/latest-updates/`. This guide is copied unchanged into Ziffa by the sync command. The publishing Worker lives only in the Ekselera repository, under `workers/latest-updates-publisher/`.
+Module version: **1.0.1**. Canonical source: Ekselera `src/features/latest-updates/`. This guide is copied unchanged into Ziffa by the sync command. The publishing Worker lives only in the Ekselera repository, under `workers/latest-updates-publisher/`.
 
 ## Architecture and ownership
 

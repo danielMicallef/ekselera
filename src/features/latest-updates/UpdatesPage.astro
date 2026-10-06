@@ -8,18 +8,24 @@ const rendered = post ? await processMarkdown(post.body, post.data.media.map((m:
 ---
 <div class="latest-updates" data-brand={config.id}>
   {post ? <>
-    <a href="/latest-updates/">← Latest Updates</a>
+    <a class="updates-back" href="/latest-updates/">← Latest Updates</a>
     <h1>{post.data.title}</h1>
     <p class="updates-meta">{config.authors[post.data.authorId]?.name || post.data.authorId} · <time datetime={post.data.publishedAt.toISOString()}>{dateLabel(post.data.publishedAt)}</time></p>
     <article data-post-id={post.data.postId} data-content-digest={post.data.contentDigest} class="updates-prose" set:html={rendered!.html} />
   </> : <>
-    <h1>Latest Updates</h1>
-    <p>News and ideas from {config.name}.</p>
-    {posts.map((item: any) => <article class="updates-entry">
-      <h2><a href={`/latest-updates/${item.data.slug}/`}>{item.data.title}</a></h2>
-      <p class="updates-meta"><time datetime={item.data.publishedAt.toISOString()}>{dateLabel(item.data.publishedAt)}</time></p>
-      <p>{item.data.summary}</p>
-    </article>)}
+    <header class="updates-heading">
+      <p class="updates-eyebrow">From {config.name}</p>
+      <h1>Latest Updates</h1>
+      <p class="updates-intro">Ideas, improvements, and news from {config.name}.</p>
+    </header>
+    <div class="updates-posts">
+      {posts.map((item: any) => <article class="updates-entry">
+        <p class="updates-meta"><time datetime={item.data.publishedAt.toISOString()}>{dateLabel(item.data.publishedAt)}</time></p>
+        <h2><a href={`/latest-updates/${item.data.slug}/`}>{item.data.title}</a></h2>
+        <p class="updates-summary">{item.data.summary}</p>
+        <a class="updates-read" href={`/latest-updates/${item.data.slug}/`} aria-label={`Read ${item.data.title}`}>Read the article <span aria-hidden="true">↗</span></a>
+      </article>)}
+    </div>
   </>}
   <Subscribe config={config} />
 </div>
