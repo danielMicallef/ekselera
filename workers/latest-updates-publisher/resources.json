@@ -1,0 +1,23 @@
+{
+  "staging": {
+    "database": "d3af9a30-e4af-4263-825b-f3e99e2ac7b3",
+    "databaseName": "latest-updates-staging",
+    "bucket": "latest-updates-drafts-staging",
+    "jurisdiction": "eu",
+    "queue": "latest-updates-staging",
+    "deadLetterQueue": "latest-updates-staging-dlq",
+    "worker": "latest-updates-publisher-staging",
+    "workerOrigin": "https://latest-updates-publisher-staging.danielmicallef94.workers.dev",
+    "workerVersion": "5f8ae898-0d7d-4d0e-9808-167f503243b7",
+    "publishingPaused": true,
+    "deliveryPaused": true
+  },
+  "production": {
+    "database": "c233a681-15de-47cf-a948-f619687c535c",
+    "databaseName": "latest-updates-production",
+    "bucket": "latest-updates-drafts-production",
+    "jurisdiction": "eu",
+    "queue": "latest-updates-production",
+    "deadLetterQueue": "latest-updates-production-dlq"
+  }
+}

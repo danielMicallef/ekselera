@@ -122,10 +122,10 @@ const { hero, form, info } = content.contact;
   </section>
 
   <script>
-    const form = document.getElementById('contact-form');
+    const form = document.querySelector<HTMLFormElement>('#contact-form');
     const statusEl = document.getElementById('form-status');
 
-    const setStatus = (message, type) => {
+    const setStatus = (message: string, type: string) => {
       if (!statusEl) return;
       statusEl.className = `alert ${type ? `alert-${type}` : ''}`;
       statusEl.textContent = message;

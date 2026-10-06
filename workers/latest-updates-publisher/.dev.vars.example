@@ -1,0 +1,9 @@
+# Use wrangler secret put for deployed secrets. Never commit the populated file.
+AUTHORS_JSON=[]
+GITHUB_APP_ID=
+GITHUB_APP_PRIVATE_KEY=
+RESEND_API_KEY=
+RESEND_WEBHOOK_SECRET=
+CI_CALLBACK_SECRET=
+# Only controlled recipients may be used in staging.
+STAGING_RECIPIENTS_JSON=[]

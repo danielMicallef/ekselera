@@ -1,0 +1,31 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "latest-updates-publisher",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [{ "type": "Text", "globs": ["**/*.css"], "fallthrough": true }],
+  "observability": { "enabled": true, "logs": { "invocation_logs": false } },
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "env": {
+    "staging": {
+      "name": "latest-updates-publisher-staging",
+      "define": {"process.env.NODE_ENV":"\"production\""},
+      "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":true},
+      "vars": { "ENVIRONMENT": "staging", "PUBLISHING_PAUSED": "true", "DELIVERY_PAUSED": "true", "SITES_JSON": "[]" },
+      "d1_databases": [{ "binding": "DB", "database_name": "latest-updates-staging", "database_id": "d3af9a30-e4af-4263-825b-f3e99e2ac7b3", "migrations_dir": "migrations" }],
+      "r2_buckets": [{ "binding": "DRAFTS", "bucket_name": "latest-updates-drafts-staging", "jurisdiction": "eu" }],
+      "queues": { "producers": [{ "binding": "JOBS", "queue": "latest-updates-staging" }], "consumers": [{ "queue": "latest-updates-staging", "max_batch_size": 1, "max_retries": 5, "dead_letter_queue": "latest-updates-staging-dlq" }] }
+    },
+    "production": {
+      "name": "latest-updates-publisher-production",
+      "define": {"process.env.NODE_ENV":"\"production\""},
+      "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":true},
+      "vars": { "ENVIRONMENT": "production", "PUBLISHING_PAUSED": "true", "DELIVERY_PAUSED": "true", "SITES_JSON": "[]" },
+      "routes": [{ "pattern": "publishing.ekselera.com", "custom_domain": true }, { "pattern": "publishing.ziffa.io", "custom_domain": true }],
+      "d1_databases": [{ "binding": "DB", "database_name": "latest-updates-production", "database_id": "c233a681-15de-47cf-a948-f619687c535c", "migrations_dir": "migrations" }],
+      "r2_buckets": [{ "binding": "DRAFTS", "bucket_name": "latest-updates-drafts-production", "jurisdiction": "eu" }],
+      "queues": { "producers": [{ "binding": "JOBS", "queue": "latest-updates-production" }], "consumers": [{ "queue": "latest-updates-production", "max_batch_size": 1, "max_retries": 5, "dead_letter_queue": "latest-updates-production-dlq" }] }
+    }
+  }
+}

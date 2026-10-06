@@ -1,0 +1,39 @@
+name: Latest Updates checks
+on:
+  pull_request:
+    branches: [main, latest-updates-staging]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.19
+      - run: bun install --frozen-lockfile
+      - name: Validate publication paths
+        if: github.event_name == 'pull_request' && contains(github.head_ref, '-publish-')
+        env:
+          UPDATES_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          UPDATES_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: bun run scripts/updates-validate.ts --pr
+      - run: bun run updates:validate && bun run updates:test && bun run publisher:check && bun run publisher:test && bunx astro check && bun run build
+      - name: Record tested revisions
+        if: github.event_name == 'pull_request'
+        env:
+          TESTED_HEAD: ${{ github.event.pull_request.head.sha }}
+          TESTED_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          mkdir -p tested
+          printf '%s\n%s\n' "$TESTED_HEAD" "$TESTED_BASE" > tested/revisions.txt
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: updates-tested-${{ github.event.pull_request.head.sha }}-${{ github.event.pull_request.base.sha }}
+          path: tested/revisions.txt
