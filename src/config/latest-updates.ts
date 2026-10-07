@@ -5,5 +5,8 @@ export const updatesConfig = {
   serviceOrigin: "https://publishing.ekselera.com",
   privacyPath: "/privacy/",
   ogImage: "https://ekselera.com/icon.png",
-  authors: {} as Record<string, { name: string }>,
+  authors: {
+    daniel: { name: "Daniel Micallef" },
+    andrew: { name: "Andrew Cassar Overend" },
+  } as Record<string, { name: string }>,
 };
