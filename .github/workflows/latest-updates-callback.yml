@@ -1,0 +1,34 @@
+name: Latest Updates validation callback
+on:
+  workflow_run:
+    workflows: [Latest Updates checks]
+    types: [completed]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  signal:
+    if: contains(github.event.workflow_run.head_branch, '-publish-')
+    runs-on: ubuntu-latest
+    steps:
+      # Only default-branch code receives secrets. Never checkout the untrusted PR.
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Signal reconciliation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRODUCTION_CALLBACK_SECRET: ${{ secrets.UPDATES_CI_CALLBACK_SECRET }}
+          PRODUCTION_SERVICE_ORIGIN: ${{ vars.UPDATES_SERVICE_ORIGIN }}
+          STAGING_CALLBACK_SECRET: ${{ secrets.UPDATES_STAGING_CI_CALLBACK_SECRET }}
+          STAGING_SERVICE_ORIGIN: ${{ vars.UPDATES_STAGING_SERVICE_ORIGIN }}
+          PUBLICATION_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          base=$(gh api --method GET "repos/$GITHUB_REPOSITORY/pulls" -f head="$GITHUB_REPOSITORY_OWNER:$PUBLICATION_BRANCH" -f state=open --jq '.[0].base.ref')
+          case "$base" in
+            main) export CI_CALLBACK_SECRET="$PRODUCTION_CALLBACK_SECRET" PUBLISHING_SERVICE_ORIGIN="$PRODUCTION_SERVICE_ORIGIN" ;;
+            latest-updates-staging) export CI_CALLBACK_SECRET="$STAGING_CALLBACK_SECRET" PUBLISHING_SERVICE_ORIGIN="$STAGING_SERVICE_ORIGIN" ;;
+            *) exit 0 ;;
+          esac
+          export UPDATES_JOB_ID="${PUBLICATION_BRANCH##*-publish-}"
+          node scripts/updates-ci-callback.mjs

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ekselera",
+    "name": "Ekselera",
+    "recipient": "post@publish.ekselera.com",
+    "origin": "https://ekselera.com",
+    "serviceOrigin": "https://publishing.ekselera.com",
+    "repository": "danielMicallef/ekselera",
+    "branch": "main",
+    "contentPrefix": "src/content/updates/",
+    "mediaPrefix": "public/latest-updates/media/",
+    "pagesProject": "ekselera",
+    "trackingIssue": 2,
+    "installationId": 0,
+    "segmentId": "bc122266-7bb8-4ebf-b9b2-37aa801b5cd8",
+    "topicId": "5fe52908-96f9-4d57-83d3-74f1bd369151",
+    "sender": "",
+    "accent": "#1a56db",
+    "background": "#ffffff",
+    "postalAddress": ""
+  },
+  {
+    "id": "ziffa",
+    "name": "Ziffa",
+    "recipient": "post@publish.ziffa.io",
+    "origin": "https://ziffa.io",
+    "serviceOrigin": "https://publishing.ziffa.io",
+    "repository": "danielMicallef/ziffa",
+    "branch": "main",
+    "contentPrefix": "astro_landing/src/content/updates/",
+    "mediaPrefix": "astro_landing/public/latest-updates/media/",
+    "pagesProject": "ziffa",
+    "trackingIssue": 682,
+    "installationId": 0,
+    "segmentId": "f0abff40-9918-4bd6-a9e5-2bcea62cd9c3",
+    "topicId": "b4fc0220-0b06-470f-a702-51a9bc072d66",
+    "sender": "",
+    "accent": "#c8962e",
+    "background": "#fafaf8",
+    "postalAddress": ""
+  }
+]

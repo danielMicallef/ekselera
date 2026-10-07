@@ -1,0 +1,293 @@
+.latest-updates {
+  --updates-ink: #0a0f1a;
+  --updates-accent: #1a56db;
+  --updates-focus: #1a56db;
+  --updates-line: #e2e8f0;
+  --updates-bg: #fff;
+  --updates-muted: #596273;
+  --updates-panel: #f7f9fd;
+  color: var(--updates-ink);
+  max-width: 828px;
+  margin: auto;
+  padding: 140px 24px 80px;
+  font-family: inherit;
+}
+.latest-updates[data-brand="ziffa"] {
+  --updates-ink: var(--ink, #1c1b19);
+  --updates-accent: var(--gold, #c8962e);
+  --updates-focus: var(--ink, #1c1b19);
+  --updates-line: var(--line, #e2e8f0);
+  --updates-bg: var(--paper, #fafaf8);
+  --updates-muted: #66645e;
+  --updates-panel: var(--gold-tint, #fbf6ea);
+  padding-top: 56px;
+}
+.latest-updates h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin: 20px 0;
+  font-weight: 700;
+}
+.latest-updates h2 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin: 36px 0 16px;
+  font-weight: 600;
+}
+.latest-updates h3 {
+  font-size: 1.25rem;
+  margin: 28px 0 12px;
+  font-weight: 600;
+}
+.latest-updates a {
+  color: var(--updates-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.latest-updates .updates-meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin: 16px 0 32px;
+}
+.latest-updates .updates-prose {
+  font-size: clamp(18px, 2.3vw, 20px);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.latest-updates .updates-prose p {
+  margin: 0 0 24px;
+}
+.latest-updates .updates-prose ul,
+.latest-updates .updates-prose ol {
+  margin: 24px 0;
+  padding-left: 1.6em;
+  list-style: disc;
+}
+.latest-updates .updates-prose ol {
+  list-style: decimal;
+}
+.latest-updates .updates-prose li {
+  margin: 8px 0;
+}
+.latest-updates .updates-prose blockquote {
+  border-left: 3px solid var(--updates-accent);
+  padding-left: 24px;
+  margin: 32px 0;
+}
+.latest-updates .updates-prose pre {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 20px;
+  background: rgba(128, 128, 128, 0.08);
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+.latest-updates .updates-prose code {
+  font-family: "JetBrains Mono", monospace;
+}
+.latest-updates .updates-prose table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 24px 0;
+  max-width: 100%;
+}
+.latest-updates .updates-prose th,
+.latest-updates .updates-prose td {
+  padding: 10px 16px;
+  border: 1px solid var(--updates-line);
+  text-align: left;
+}
+.latest-updates .updates-prose img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: 32px auto;
+  border-radius: 10px;
+}
+.latest-updates .updates-entry {
+  padding: 32px 0 36px;
+}
+.latest-updates .updates-entry + .updates-entry {
+  border-top: 1px solid var(--updates-line);
+}
+.latest-updates .updates-entry h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(1.45rem, 3.1vw, 1.8rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+.latest-updates .updates-entry h2 a {
+  text-decoration: none;
+}
+.latest-updates .updates-entry h2 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.latest-updates .updates-subscribe {
+  background: var(--updates-panel);
+  border: 1px solid var(--updates-line);
+  border-radius: 20px;
+  margin-top: 24px;
+  padding: 32px;
+}
+.latest-updates .updates-form-row {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0 12px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.latest-updates .updates-form-row input {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.latest-updates input {
+  border: 1px solid var(--updates-line);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: var(--updates-ink);
+  background: #fff;
+  font: inherit;
+  font-size: 1rem;
+  height: 52px;
+}
+.latest-updates .updates-form-row button {
+  height: 52px;
+  min-height: 52px;
+  border-radius: 10px;
+  padding: 0 24px;
+  font-size: 0.95rem;
+  box-shadow: none;
+}
+.latest-updates .updates-helper,
+.latest-updates [role="status"] {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.latest-updates :focus-visible {
+  outline: 3px solid var(--updates-focus);
+  outline-offset: 4px;
+}
+.latest-updates .updates-trap {
+  position: absolute;
+  left: -10000px;
+}
+@media (max-width: 480px) {
+  .latest-updates {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .latest-updates .updates-form-row button {
+    width: 100%;
+  }
+}
+
+.latest-updates .updates-heading {
+  border-bottom: 1px solid var(--updates-line);
+  padding-bottom: 32px;
+}
+.latest-updates .updates-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--updates-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.latest-updates .updates-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--updates-accent);
+}
+.latest-updates .updates-heading h1 {
+  margin: 16px 0 12px;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  letter-spacing: -0.045em;
+}
+.latest-updates .updates-intro,
+.latest-updates .updates-summary {
+  color: var(--updates-muted);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 64ch;
+}
+.latest-updates .updates-entry .updates-meta {
+  margin: 0;
+  color: var(--updates-muted);
+  font-size: 0.7rem;
+}
+.latest-updates .updates-read,
+.latest-updates .updates-back {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.latest-updates .updates-read {
+  margin-top: 20px;
+}
+.latest-updates .updates-read span {
+  font-size: 1.1rem;
+}
+.latest-updates .updates-subscribe-heading h2 {
+  max-width: 440px;
+  margin: 16px 0 8px;
+  font-size: clamp(1.35rem, 2.6vw, 1.65rem);
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+.latest-updates .updates-subscribe-heading p {
+  color: var(--updates-muted);
+  font-size: 0.95rem;
+  margin: 0 0 24px;
+}
+.latest-updates .updates-mail-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--updates-bg);
+  border: 1px solid var(--updates-line);
+  border-radius: 10px;
+}
+.latest-updates .updates-mail-icon svg {
+  width: 21px;
+  height: 21px;
+}
+.latest-updates .updates-subscribe label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.latest-updates .updates-helper {
+  color: var(--updates-muted);
+  margin-bottom: 0;
+}
+.latest-updates [role="status"]:empty {
+  display: none;
+}
+@media (max-width: 480px) {
+  .latest-updates[data-brand="ziffa"] {
+    padding-top: 36px;
+  }
+  .latest-updates .updates-heading {
+    padding-bottom: 24px;
+  }
+  .latest-updates .updates-subscribe {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  .latest-updates .updates-form-row {
+    gap: 10px;
+  }
+}

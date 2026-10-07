@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import UpdatesPage from '../../features/latest-updates/UpdatesPage.astro';
+import { publishedUpdates } from '../../features/latest-updates/content';
+import { updatesConfig as config } from '../../config/latest-updates';
+export async function getStaticPaths() {
+  const posts = await publishedUpdates();
+  return posts.length ? [{ params: { slug: undefined }, props: { posts } }, ...posts.map(post => ({ params: { slug: post.data.slug }, props: { post, posts } }))] : [];
+}
+const { post, posts } = Astro.props;
+const canonical = new URL(post ? `/latest-updates/${post.data.slug}/` : '/latest-updates/', config.origin).href;
+const title = post ? `${post.data.title} | ${config.name}` : `Latest Updates | ${config.name}`;
+const jsonLd = post ? { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.data.title, datePublished: post.data.publishedAt.toISOString(), description: post.data.summary, url: canonical, image: config.ogImage, author: { '@type': 'Person', name: config.authors[post.data.authorId]?.name || post.data.authorId } } : undefined;
+---
+<Layout title={title} description={post?.data.summary || `Latest Updates from ${config.name}`} canonical={canonical} ogImage={config.ogImage} jsonLd={jsonLd} ogType={post ? 'article' : 'website'}>
+  <UpdatesPage post={post} posts={posts} config={config} />
+</Layout>

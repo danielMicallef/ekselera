@@ -9,6 +9,7 @@ interface Props {
 	canonical?: string;
 	ogImage?: string;
 	jsonLd?: unknown;
+	ogType?: 'website' | 'article';
 }
 
 const {
@@ -17,6 +18,7 @@ const {
 	canonical,
 	ogImage = "https://ekselera.com/og-image.png",
 	jsonLd,
+	ogType = "website",
 } = Astro.props;
 ---
 <!doctype html>
@@ -28,7 +30,7 @@ const {
 		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 		<meta name="theme-color" content="#ffffff" />
 		{canonical && <link rel="canonical" href={canonical} />}
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={ogType} />
 		<meta property="og:site_name" content="Ekselera" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
@@ -41,7 +43,7 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		{jsonLd && (
-			<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
 		)}
 	</head>
 	<body class="min-h-screen flex flex-col bg-base-100 text-base-content">

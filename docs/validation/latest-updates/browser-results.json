@@ -1,0 +1,140 @@
+[
+  {
+    "site": "ekselera",
+    "width": 360,
+    "route": "/latest-updates/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "font": "\"DM Sans\", sans-serif",
+    "articleWidth": 360,
+    "titleTop": 160
+  },
+  {
+    "site": "ekselera",
+    "width": 360,
+    "route": "/latest-updates/a-faster-way-to-process-supplier-invoices-cafe-updates-from-malta-11111111/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "font": "\"DM Sans\", sans-serif",
+    "articleWidth": 360,
+    "titleTop": 184
+  },
+  {
+    "site": "ekselera",
+    "width": 768,
+    "route": "/latest-updates/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "font": "\"DM Sans\", sans-serif",
+    "articleWidth": 768,
+    "titleTop": 160
+  },
+  {
+    "site": "ekselera",
+    "width": 768,
+    "route": "/latest-updates/a-faster-way-to-process-supplier-invoices-cafe-updates-from-malta-11111111/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "font": "\"DM Sans\", sans-serif",
+    "articleWidth": 768,
+    "titleTop": 184
+  },
+  {
+    "site": "ekselera",
+    "width": 1280,
+    "route": "/latest-updates/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "font": "\"DM Sans\", sans-serif",
+    "articleWidth": 828,
+    "titleTop": 160
+  },
+  {
+    "site": "ekselera",
+    "width": 1280,
+    "route": "/latest-updates/a-faster-way-to-process-supplier-invoices-cafe-updates-from-malta-11111111/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "font": "\"DM Sans\", sans-serif",
+    "articleWidth": 828,
+    "titleTop": 184
+  },
+  {
+    "site": "ziffa",
+    "width": 360,
+    "route": "/latest-updates/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(250, 250, 248)",
+    "font": "\"DM Sans\", system-ui, sans-serif",
+    "articleWidth": 360,
+    "headerBottom": 65,
+    "titleTop": 149
+  },
+  {
+    "site": "ziffa",
+    "width": 360,
+    "route": "/latest-updates/a-faster-way-to-process-supplier-invoices-cafe-updates-from-malta-11111111/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(250, 250, 248)",
+    "font": "\"DM Sans\", system-ui, sans-serif",
+    "articleWidth": 360,
+    "headerBottom": 65,
+    "titleTop": 177.796875
+  },
+  {
+    "site": "ziffa",
+    "width": 768,
+    "route": "/latest-updates/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(250, 250, 248)",
+    "font": "\"DM Sans\", system-ui, sans-serif",
+    "articleWidth": 768,
+    "headerBottom": 71,
+    "titleTop": 155
+  },
+  {
+    "site": "ziffa",
+    "width": 768,
+    "route": "/latest-updates/a-faster-way-to-process-supplier-invoices-cafe-updates-from-malta-11111111/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(250, 250, 248)",
+    "font": "\"DM Sans\", system-ui, sans-serif",
+    "articleWidth": 768,
+    "headerBottom": 71,
+    "titleTop": 183.796875
+  },
+  {
+    "site": "ziffa",
+    "width": 1280,
+    "route": "/latest-updates/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(250, 250, 248)",
+    "font": "\"DM Sans\", system-ui, sans-serif",
+    "articleWidth": 828,
+    "headerBottom": 71,
+    "titleTop": 155
+  },
+  {
+    "site": "ziffa",
+    "width": 1280,
+    "route": "/latest-updates/a-faster-way-to-process-supplier-invoices-cafe-updates-from-malta-11111111/",
+    "status": 200,
+    "overflow": false,
+    "background": "rgb(250, 250, 248)",
+    "font": "\"DM Sans\", system-ui, sans-serif",
+    "articleWidth": 828,
+    "headerBottom": 71,
+    "titleTop": 183.796875
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "site": "ekselera",
+    "zoom": 2,
+    "overflow": false
+  },
+  {
+    "site": "ekselera",
+    "keyboardEmailField": true,
+    "outline": "solid"
+  },
+  {
+    "site": "ziffa",
+    "zoom": 2,
+    "overflow": false
+  },
+  {
+    "site": "ziffa",
+    "keyboardEmailField": true,
+    "outline": "solid"
+  }
+]

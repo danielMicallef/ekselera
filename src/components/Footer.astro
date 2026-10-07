@@ -1,5 +1,7 @@
 ---
 import content from '../i18n/en.json';
+import { publishedUpdates } from '../features/latest-updates/content';
+const hasUpdates = (await publishedUpdates()).length > 0;
 
 const { simple } = content.footer;
 ---
@@ -11,6 +13,7 @@ const { simple } = content.footer;
         {simple.copy.replace('{{year}}', String(new Date().getFullYear()))}
       </p>
       <div class="flex flex-wrap items-center justify-center gap-6">
+        {hasUpdates && <a class="link link-hover text-sm" href="/latest-updates/">Latest Updates</a>}
         {simple.links.map((item) => (
           <a
             href={item.link}

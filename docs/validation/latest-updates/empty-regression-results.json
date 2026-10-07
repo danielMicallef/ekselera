@@ -1,0 +1,36 @@
+[
+  {
+    "site": "ekselera",
+    "emptyStatus": 404,
+    "noUpdatesLink": true,
+    "noUpdatesSitemap": true,
+    "emptyManifest": true
+  },
+  {
+    "site": "ekselera",
+    "width": 360,
+    "homepageStyleAndHeaderGeometryUnchanged": true
+  },
+  {
+    "site": "ekselera",
+    "width": 1280,
+    "homepageStyleAndHeaderGeometryUnchanged": true
+  },
+  {
+    "site": "ziffa",
+    "emptyStatus": 404,
+    "noUpdatesLink": true,
+    "noUpdatesSitemap": true,
+    "emptyManifest": true
+  },
+  {
+    "site": "ziffa",
+    "width": 360,
+    "homepageStyleAndHeaderGeometryUnchanged": true
+  },
+  {
+    "site": "ziffa",
+    "width": 1280,
+    "homepageStyleAndHeaderGeometryUnchanged": true
+  }
+]
